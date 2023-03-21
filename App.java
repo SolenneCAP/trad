@@ -10,6 +10,7 @@ public class App {
         Breton vBreton = new Breton();
         vBreton.addDico("Bonjour", "Demat");
 
+
         System.out.println("Choisir votre langue pour dire bonjour ");
         System.out.println("1 : Anglais");
         System.out.println("2 : Breton");
@@ -23,6 +24,8 @@ public class App {
                 System.out.println("Choix invalide, veuillez réessayer.");
             }
         }
+
+
 
         if (choix == 1) {
             System.out.println(vAnglais.getTraduction("Bonjour"));
