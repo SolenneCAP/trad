@@ -9,16 +9,19 @@ public class App {
         vAnglais.addDico("Bonjour", "Hello");
         Breton vBreton = new Breton();
         vBreton.addDico("Bonjour", "Demat");
+        Togolais vTogolais = new Togolais();
+        vTogolais.addDico( "Bonjour","Agbeleme" );
 
         System.out.println("Choisir votre langue pour dire bonjour ");
         System.out.println("1 : Anglais");
         System.out.println("2 : Breton");
+        System.out.println(("3 : Togolais"));
 
         boolean choixValide = false;
         while (!choixValide) {
             try {
                 choix = Integer.parseInt(scan.nextLine());
-                if (choix == 1 || choix == 2) {
+                if (choix == 1 || choix == 2 || choix == 3) {
                     choixValide = true;
                 } else {
                     System.out.println("Choix invalide, veuillez réessayer.");
@@ -30,7 +33,11 @@ public class App {
 
         if (choix == 1) {
             System.out.println(vAnglais.getTraduction("Bonjour"));
-        } else {
+        }
+        else if (choix == 3) {
+            System.out.println(vTogolais.getTraduction("Bonjour"));
+        }
+        else {
             System.out.println(vBreton.getTraduction("Bonjour"));
         }
     }
